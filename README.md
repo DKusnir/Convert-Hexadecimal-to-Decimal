@@ -8,7 +8,7 @@ Function requires 1 parameter - and that is a HEX value.
 
 1. At the beginning,  get length of the HEX and substract 1 :
 ```ps1
-- [int]$hexLength = ($hex.Length) - 1 
+[int]$hexLength = ($hex.Length) - 1 
 ```
  
 2. Convert HEX code to DEC based on the current position ( at the beginning, position is always 0 )
