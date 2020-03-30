@@ -12,9 +12,9 @@ Function requires 1 parameter - and that is a HEX value.
 ```
  
 2. Convert HEX code to DEC based on the current position ( at the beginning, position is always 0 )
-
-switch( $hex.Substring($CurrentPosition,1) )  
-{ 
+```diff
+- switch( $hex.Substring($CurrentPosition,1) )  
+- { 
                 '0'     { [int]$hexInt = 0 } 
                 '1'     { [int]$hexInt = 1 } 
                 '2'    { [int]$hexInt = 2 } 
@@ -31,8 +31,8 @@ switch( $hex.Substring($CurrentPosition,1) )
                 'D'    { [int]$hexInt = 13 } 
                 'E'    { [int]$hexInt = 14 } 
                 'F'    { [int]$hexInt = 15 } 
-}
-
+- }
+```
 
 
 
