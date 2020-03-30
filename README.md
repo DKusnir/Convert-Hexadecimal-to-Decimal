@@ -5,13 +5,12 @@ Hexadecimal to Decimal Conversion Function that will display the result in 64 bi
 I am posting this simple function for those who would like to see the real calculation of Hexadecimal number into a Decimal number. The only reason is that i could not get same output using built-in convert methods as using Windows calculator. Function is using 64 bit integer in order to convert to high value numbers. Code is very simple : 
 Function requires 1 parameter - and that is a HEX value. 
 
-==============================================================
-1. At the beginning,  get length of the HEX and substract 1 :
 
- [int]$hexLength = ($hex.Length) - 1
-==============================================================
+1. At the beginning,  get length of the HEX and substract 1 :
+```diff
+- [int]$hexLength = ($hex.Length) - 1 
+```
  
-==============================================================
 2. Convert HEX code to DEC based on the current position ( at the beginning, position is always 0 )
 
 switch( $hex.Substring($CurrentPosition,1) )  
@@ -33,7 +32,9 @@ switch( $hex.Substring($CurrentPosition,1) )
                 'E'    { [int]$hexInt = 14 } 
                 'F'    { [int]$hexInt = 15 } 
 }
-==============================================================
+
+
+
 
 ==============================================================
 3. do simple multiplication because this is needed to for POW calculation
