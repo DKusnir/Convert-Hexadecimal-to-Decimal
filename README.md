@@ -1,7 +1,7 @@
 # Convert-Hexadecimal-to-Decimal
-<font color="Green">
-Hexadecimal to Decimal Conversion Function that will display the result in 64 bit Integer value
-</font>
+```diff
++ Hexadecimal to Decimal Conversion Function that will display the result in 64 bit Integer value
+```
 
 I am posting this simple function for those who would like to see the real calculation of Hexadecimal number into a Decimal number. The only reason is that i could not get same output using built-in convert methods as using Windows calculator. Function is using 64 bit integer in order to convert to high value numbers. Code is very simple : 
 Function requires 1 parameter - and that is a HEX value. 
