@@ -12,7 +12,7 @@ Function requires 1 parameter - and that is a HEX value.
 ```
  
 2. Convert HEX code to DEC based on the current position ( at the beginning, position is always 0 )
-```diff
+```ps1
 - switch( $hex.Substring($CurrentPosition,1) )  
 - { 
                 '0'     { [int]$hexInt = 0 } 
