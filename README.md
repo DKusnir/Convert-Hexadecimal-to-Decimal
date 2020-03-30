@@ -7,14 +7,14 @@ Function requires 1 parameter - and that is a HEX value.
 
 
 1. At the beginning,  get length of the HEX and substract 1 :
-```diff
+```ps1
 - [int]$hexLength = ($hex.Length) - 1 
 ```
  
 2. Convert HEX code to DEC based on the current position ( at the beginning, position is always 0 )
 ```ps1
-- switch( $hex.Substring($CurrentPosition,1) )  
-- { 
+switch( $hex.Substring($CurrentPosition,1) )  
+{ 
                 '0'     { [int]$hexInt = 0 } 
                 '1'     { [int]$hexInt = 1 } 
                 '2'    { [int]$hexInt = 2 } 
@@ -31,37 +31,32 @@ Function requires 1 parameter - and that is a HEX value.
                 'D'    { [int]$hexInt = 13 } 
                 'E'    { [int]$hexInt = 14 } 
                 'F'    { [int]$hexInt = 15 } 
-- }
+}
 ```
 
 
-
-==============================================================
 3. do simple multiplication because this is needed to for POW calculation
-
+```ps1
 $Multiplicator = $hexLength - $CurrentPosition
-==============================================================
+```
 
-==============================================================
+
 4. Calculation of value and its multiplication
-
+```ps1
  [int64]$hexMplx = [math]::Pow(16,$Multiplicator)  
  [int64]$dec = $dec + ($hexInt*$hexMplx) 
  $CurrentPosition++  
-==============================================================
+```
 
-
-==============================================================
 5. Lastly, we break the function with until statement
-
+```ps1
  until 
 ( 
      $CurrentPosition -eq $hex.Length 
 )
-==============================================================
+```
 
-==============================================================
 6. Result is then displayed as 64 bit integer mentioned earlier :
- 
+```ps1
 [INT64]$dec
-==============================================================
+```
